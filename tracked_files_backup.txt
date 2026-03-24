@@ -1,0 +1,35 @@
+.gitignore
+8T_sram_array_test - Copy - Copy.sch
+8T_sram_array_test - Copy.sch
+8T_sram_array_test.sch
+8T_sram_array_test_py.sch
+8T_sram_cell.sch
+8T_sram_cell.sym
+8T_sram_cell2.sch
+8T_sram_cell2.sym
+8T_sram_mac.sch
+8Tsram_old.sch
+8Tsram_test - Copy.sch
+8Tsram_test.sch
+8Tsram_work.sch
+New Text Document.txt
+RCcircuit.sch
+README.md
+code_shown_test.sch
+inv_1.sch
+inv_1.sym
+inv_test.sch
+inverter.sch
+nfet_char.sch
+readme images/devices_folder.png
+readme images/wsl_fileExplorer.png
+readme images/xschem_projects.png
+simulation/8Tsram_test.sch/8Tsram_test.spice
+testing.sch
+untitled.sch
+voltage_comp/voltage_comp.sch
+vscode/8T_sram_array_test - Copy - Copy.sch
+vscode/8T_sram_array_test - Copy.sch
+vscode/code_shown_test.sch
+vscode/plotting.py
+work.sch

@@ -1,0 +1,40 @@
+Outer and Inner Repo Workflow
+
+Goal
+- You have an inner repo (xschem_projects) actively used.
+- You have an outer repo (xschem_projects_local) that occasionally needs to commit snapshots of the inner repo files.
+- Inner repo remains fully independent; its commits and remote are not affected by the outer repo.
+- Outer repo commits only store the current state of inner repo files, as a backup or snapshot.
+
+Setup
+1. Keep the inner repo intact with its .git folder.
+2. In the outer repo, ignore the inner repo’s .git:
+
+   xschem_projects/.git
+
+- This ensures outer repo tracks inner repo files but not its Git history.
+
+Workflow
+1. Edit and commit in the inner repo first:
+
+   cd xschem_projects
+   git add .
+   git commit -m "Inner repo changes"
+   git push  # optional
+
+2. Commit the updated inner repo files in the outer repo:
+
+   cd ../xschem_projects_local
+   git add xschem_projects
+   git commit -m "Snapshot of inner repo at latest state"
+   git push
+
+- Outer repo now has a snapshot of the inner repo files.
+- Inner repo commits remain independent.
+- Repeat this whenever you want to back up the current state.
+
+Key Points
+- Outer repo can commit any files from inner repo occasionally.
+- Inner repo continues normal work independently.
+- No .git toggling is needed.
+- This workflow preserves both histories while allowing occasional outer repo snapshots.
