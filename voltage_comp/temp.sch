@@ -6,30 +6,30 @@ S {}
 F {}
 E {}
 N 870 210 870 590 {lab=MAC[0..8]}
-N 880 320 1010 320 {lab=MAC2}
-N 1010 320 1050 320 {lab=MAC2}
-N 880 480 1000 480 {lab=MAC6}
-N 1000 400 1000 480 {lab=MAC6}
-N 1000 400 1050 400 {lab=MAC6}
-N 1020 440 1050 440 {lab=MAC8}
+N 880 320 1010 320 {lab=MAC6}
+N 1010 320 1050 320 {lab=MAC6}
+N 880 480 1000 480 {lab=MAC2}
+N 1000 400 1000 480 {lab=MAC2}
+N 1000 400 1050 400 {lab=MAC2}
+N 1020 440 1050 440 {lab=MAC0}
 N 1170 380 1340 380 {lab=XOR}
-N 880 560 1340 560 {lab=MAC8}
+N 880 560 1340 560 {lab=MAC0}
 N 1010 360 1050 360 {lab=MAC4}
-N 1020 440 1020 560 {lab=MAC8}
+N 1020 440 1020 560 {lab=MAC0}
 N 880 400 980 400 {lab=MAC4}
 N 980 360 980 400 {lab=MAC4}
 N 980 360 1010 360 {lab=MAC4}
-N 880 240 1190 240 {lab=MAC0}
+N 880 240 1190 240 {lab=MAC8}
 N 1210 460 1220 460 {lab=XOR}
 N 1210 380 1210 460 {lab=XOR}
-N 1190 240 1340 240 {lab=MAC0}
-N 1210 300 1220 300 {lab=MAC0}
-N 1210 240 1210 300 {lab=MAC0}
-N 1210 630 1220 630 {lab=MAC8}
-N 1210 560 1210 630 {lab=MAC8}
+N 1190 240 1340 240 {lab=MAC8}
+N 1210 300 1220 300 {lab=MAC8}
+N 1210 240 1210 300 {lab=MAC8}
+N 1210 630 1220 630 {lab=MAC0}
+N 1210 560 1210 630 {lab=MAC0}
 N 680 210 870 210 {lab=MAC[0..8]}
 N 750 190 750 210 {lab=MAC[0..8]}
-C {lab_pin.sym} 320 110 0 1 {name=p1 sig_type=std_logic lab=9*RBL7}
+C {lab_pin.sym} 320 110 0 1 {name=p1 sig_type=std_logic lab=9*RBL}
 C {lab_pin.sym} 320 210 0 1 {name=p2 sig_type=std_logic lab=EN}
 C {lab_pin.sym} 320 190 0 1 {name=p3 lab=EN_bar}
 C {lab_pin.sym} 320 50 0 1 {name=p4 sig_type=std_logic lab=VSS}
@@ -39,15 +39,15 @@ C {lab_pin.sym} 320 90 0 1 {name=p7 sig_type=std_logic lab=CLK_bar}
 C {lab_pin.sym} 750 190 0 1 {name=p8 sig_type=std_logic lab=MAC[0..8]}
 C {lab_pin.sym} 320 130 0 1 {name=p9 sig_type=std_logic lab=9*TR2}
 C {voltage_comp/comp_9.sym} 170 120 0 0 {name=x1}
-C {bus_tap.sym} 870 230 1 0 {name=l1 lab=0}
-C {bus_tap.sym} 870 270 1 0 {name=l2 lab=1}
-C {bus_tap.sym} 870 310 1 0 {name=l3 lab=2}
-C {bus_tap.sym} 870 350 1 0 {name=l4 lab=3}
+C {bus_tap.sym} 870 550 1 0 {name=l1 lab=0}
+C {bus_tap.sym} 870 510 1 0 {name=l2 lab=1}
+C {bus_tap.sym} 870 470 1 0 {name=l3 lab=2}
+C {bus_tap.sym} 870 430 1 0 {name=l4 lab=3}
 C {bus_tap.sym} 870 390 1 0 {name=l5 lab=4}
-C {bus_tap.sym} 870 430 1 0 {name=l6 lab=5}
-C {bus_tap.sym} 870 470 1 0 {name=l7 lab=6}
-C {bus_tap.sym} 870 510 1 0 {name=l8 lab=7}
-C {bus_tap.sym} 870 550 1 0 {name=l9 lab=8}
+C {bus_tap.sym} 870 350 1 0 {name=l6 lab=5}
+C {bus_tap.sym} 870 310 1 0 {name=l7 lab=6}
+C {bus_tap.sym} 870 270 1 0 {name=l8 lab=7}
+C {bus_tap.sym} 870 230 1 0 {name=l9 lab=8}
 C {logic gates/nor4.sym} 1110 380 0 0 {name=x2}
 C {iopin.sym} 100 -580 0 1 {name=p11 lab=VSS}
 C {iopin.sym} 100 -620 0 1 {name=p12 lab=VCC}
@@ -92,3 +92,11 @@ C {lab_pin.sym} 1340 630 0 1 {name=p48 sig_type=std_logic lab=NAND}
 C {inv.sym} 1280 460 0 0 {name=x5}
 C {lab_pin.sym} 1340 240 0 1 {name=p30 sig_type=std_logic lab=NOR}
 C {inv.sym} 1280 630 0 0 {name=x6}
+C {lab_pin.sym} 1280 280 0 1 {name=p10 sig_type=std_logic lab=VCC}
+C {lab_pin.sym} 1280 440 0 1 {name=p49 sig_type=std_logic lab=VCC}
+C {lab_pin.sym} 1280 610 0 1 {name=p50 sig_type=std_logic lab=VCC}
+C {lab_pin.sym} 1280 320 0 1 {name=p51 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1280 480 0 1 {name=p52 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} 1280 650 0 1 {name=p53 sig_type=std_logic lab=VSS}
+C {iopin.sym} 100 -460 0 1 {name=p54 lab=RBL}
+C {lab_pin.sym} 100 -460 0 1 {name=p55 sig_type=std_logic lab=RBL}

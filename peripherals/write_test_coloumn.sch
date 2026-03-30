@@ -13,8 +13,8 @@ ypos2=3.6343
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.1e-07
+x1=3.3087225e-24
+x2=2.985e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -45,16 +45,16 @@ rawfile=$netlist_dir/write_test_coloumn.raw
 autoload=0
 digital=1
 legend=1}
-B 2 -2000 -2420 -1200 -2020 {flags=graph
+B 2 -1180 -2820 -380 -2420 {flags=graph
 y1=-0.027
 y2=1.9
-ypos1=-0.12335
-ypos2=1.80365
+ypos1=0.06935
+ypos2=1.99635
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.1e-07
+x1=3.3087225e-24
+x2=2.985e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -87,8 +87,8 @@ ypos2=1.99635
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.1e-07
+x1=3.3087225e-24
+x2=2.985e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -112,15 +112,15 @@ y2
 y1
 y0"}
 B 2 -1170 -1430 -370 -1030 {flags=graph
-y1=0.36
-y2=2.16
+y1=-0.036
+y2=1.9
 ypos1=-0.027
 ypos2=1.9
 divy=5
 subdivy=1
 unity=1
-x1=0
-x2=1.1e-07
+x1=3.3087225e-24
+x2=2.985e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -252,7 +252,7 @@ C {lab_pin.sym} 110 -2150 0 0 {name=p83 sig_type=std_logic lab=EN}
 C {lab_pin.sym} 40 -1520 0 0 {name=p84 sig_type=std_logic lab=EN}
 C {lab_pin.sym} 100 -1660 0 0 {name=p85 sig_type=std_logic lab=VCC}
 C {lab_pin.sym} 100 -1480 0 0 {name=p86 sig_type=std_logic lab=VSS}
-C {code_shown.sym} -2050 -1560 0 1 {name=s3 only_toplevel=false spice_ignore=false value=
+C {code_shown.sym} -2050 -1560 0 1 {name=s3 only_toplevel=false spice_ignore=true value=
 "
 .param dly=0ns t_dly=1ns rise=10ps fall=10ps BL_period=10ns prds=8 pre_time=6ns read_time=0.5ns write_delay=(BL_period*8) 
 
@@ -318,7 +318,7 @@ C {iopin.sym} 110 -1800 0 0 {name=p89 lab=RBL}
 C {iopin.sym} 110 -1780 0 0 {name=p90 lab=RWL}
 C {lab_pin.sym} 110 -1800 0 0 {name=p91 sig_type=std_logic lab=RBL}
 C {lab_pin.sym} 110 -1780 0 0 {name=p92 sig_type=std_logic lab=RWL}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 120 -1170 0 0 {name=C2 model=cap_mim_m3_1 W=80 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 120 -1170 0 0 {name=C2 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 120 -1370 2 0 {name=l1 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 100 -1320 2 1 {name=M2
 W=1
@@ -339,3 +339,13 @@ C {lab_pin.sym} 270 -1230 0 1 {name=p94 sig_type=std_logic lab=RBL}
 C {iopin.sym} 110 -1750 0 0 {name=p93 lab=PRE}
 C {lab_pin.sym} 110 -1750 0 0 {name=p95 sig_type=std_logic lab=PRE}
 C {lab_pin.sym} 50 -1320 0 0 {name=p96 sig_type=std_logic lab=PRE}
+C {code_shown.sym} -2910 -1930 0 0 {name=s5 only_toplevel=false value=
+"
+.param VSS=0 VCC=1.8 BL_period=3ns t_dly=1ns rise=10ps fall =10ps rwl_time=0.5ns pre_time=6ns clk_period=30ns
+
+.include "/home/user/pyvenvs/sky130venv/spice_files/coloumn_test_sram.spice"
+.include "/home/user/pyvenvs/sky130venv/spice_files/coloumn_test_code.spice"
+*.include "/home/user/pyvenvs/sky130venv/spice_files/thresholds.spice"
+.save all
+
+"}

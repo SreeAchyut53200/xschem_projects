@@ -13,8 +13,8 @@ ypos2=1.5146
 divy=5
 subdivy=1
 unity=1
-x1=1.5736705e-07
-x2=1.5793901e-07
+x1=0
+x2=1.8e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -23,10 +23,9 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/write_test_row1.raw
 autoload=0
 digital=1
-color="4 5 6 7 8 9"
+color="4 5 6 7 8 4"
 node="s2
 s1
 s0
@@ -42,8 +41,8 @@ ypos2=3.53795
 divy=5
 subdivy=1
 unity=1
-x1=1.5736705e-07
-x2=1.5793901e-07
+x1=0
+x2=1.8e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -52,7 +51,6 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/write_test_row1.raw
 autoload=0
 digital=1
 color="8 5 6 7 8 9 10 11 6 8 8 8 8 8 8 8 8"
@@ -82,7 +80,7 @@ ypos2=1.9
 divy=5
 subdivy=1
 unity=1
-x2=1.5793901e-07
+x2=1.8e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -91,7 +89,6 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/write_test_row1.raw
 autoload=0
 digital=0
 hilight_wave=2
@@ -99,7 +96,7 @@ color="4 5 6"
 node="pre
 rwl
 rbl7"
-x1=1.5736705e-07}
+x1=0}
 B 2 -942.283778888446 -2930 -142.2837788884458 -2530 {flags=graph
 y1=-0.027
 y2=1.9
@@ -108,8 +105,8 @@ ypos2=2.0927
 divy=5
 subdivy=1
 unity=1
-x1=1.5736705e-07
-x2=1.5793901e-07
+x1=0
+x2=1.8e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -118,7 +115,6 @@ dataset=-1
 unitx=1
 logx=0
 logy=0
-rawfile=$netlist_dir/write_test_row1.raw
 autoload=0
 digital=1
 hilight_wave=-1
@@ -161,22 +157,6 @@ N 1180 -2190 1180 -2080 {lab=BLB3}
 N 1180 -2080 1240 -2080 {lab=BLB3}
 N 1160 -2240 1160 -2060 {lab=BL3}
 N 1160 -2060 1240 -2060 {lab=BL3}
-N 1470 -2190 1470 -2080 {lab=BLB4}
-N 1470 -2080 1530 -2080 {lab=BLB4}
-N 1450 -2240 1450 -2060 {lab=BL4}
-N 1450 -2060 1530 -2060 {lab=BL4}
-N 1760 -2190 1760 -2080 {lab=BLB5}
-N 1760 -2080 1820 -2080 {lab=BLB5}
-N 1740 -2240 1740 -2060 {lab=BL5}
-N 1740 -2060 1820 -2060 {lab=BL5}
-N 2050 -2190 2050 -2080 {lab=BLB6}
-N 2050 -2080 2110 -2080 {lab=BLB6}
-N 2030 -2240 2030 -2060 {lab=BL6}
-N 2030 -2060 2110 -2060 {lab=BL6}
-N 2340 -2190 2340 -2080 {lab=BLB7}
-N 2340 -2080 2400 -2080 {lab=BLB7}
-N 2320 -2240 2320 -2060 {lab=BL7}
-N 2320 -2060 2400 -2060 {lab=BL7}
 N 200 -1670 200 -1480 {lab=WL[0..7]
 bus=true}
 N 150 -1640 190 -1640 {lab=WL7}
@@ -288,11 +268,6 @@ plot EN
 plot I0 I1+2 I2+4
 .endc
 "}
-C {launcher.sym} -980 -2480 0 0 {name=h5
-descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/write_test_row1.raw tran"
-}
-C {8T_sram_cell_c.sym} 2550 -2060 0 1 {name=x8}
 C {lab_pin.sym} 370 -2020 0 0 {name=p87 sig_type=std_logic lab=RWL}
 C {lab_pin.sym} 370 -2040 0 0 {name=p103 sig_type=std_logic lab=RBL7}
 C {iopin.sym} 110 -1880 0 0 {name=p89 lab=RBL[0..7]}
@@ -337,30 +312,7 @@ C {lab_pin.sym} 1240 -2120 0 0 {name=p40 sig_type=std_logic lab=VCC}
 C {8T_sram_cell_c.sym} 1100 -2060 0 1 {name=x3}
 C {lab_pin.sym} 1240 -2020 0 0 {name=p41 sig_type=std_logic lab=RWL}
 C {lab_pin.sym} 1240 -2040 0 0 {name=p42 sig_type=std_logic lab=RBL7}
-C {lab_pin.sym} 1530 -2100 0 0 {name=p44 sig_type=std_logic lab=WL0}
-C {lab_pin.sym} 1530 -2000 0 0 {name=p47 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1530 -2120 0 0 {name=p48 sig_type=std_logic lab=VCC}
 C {8T_sram_cell_c.sym} 1390 -2060 0 1 {name=x4}
-C {lab_pin.sym} 1530 -2020 0 0 {name=p49 sig_type=std_logic lab=RWL}
-C {lab_pin.sym} 1530 -2040 0 0 {name=p52 sig_type=std_logic lab=RBL7}
-C {lab_pin.sym} 1820 -2100 0 0 {name=p53 sig_type=std_logic lab=WL0}
-C {lab_pin.sym} 1820 -2000 0 0 {name=p56 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 1820 -2120 0 0 {name=p57 sig_type=std_logic lab=VCC}
-C {8T_sram_cell_c.sym} 1680 -2060 0 1 {name=x5}
-C {lab_pin.sym} 1820 -2020 0 0 {name=p58 sig_type=std_logic lab=RWL}
-C {lab_pin.sym} 1820 -2040 0 0 {name=p88 sig_type=std_logic lab=RBL7}
-C {lab_pin.sym} 2110 -2100 0 0 {name=p97 sig_type=std_logic lab=WL0}
-C {lab_pin.sym} 2110 -2000 0 0 {name=p100 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 2110 -2120 0 0 {name=p101 sig_type=std_logic lab=VCC}
-C {8T_sram_cell_c.sym} 1970 -2060 0 1 {name=x6}
-C {lab_pin.sym} 2110 -2020 0 0 {name=p104 sig_type=std_logic lab=RWL}
-C {lab_pin.sym} 2110 -2040 0 0 {name=p105 sig_type=std_logic lab=RBL7}
-C {lab_pin.sym} 2400 -2100 0 0 {name=p106 sig_type=std_logic lab=WL0}
-C {lab_pin.sym} 2400 -2000 0 0 {name=p109 sig_type=std_logic lab=VSS}
-C {lab_pin.sym} 2400 -2120 0 0 {name=p110 sig_type=std_logic lab=VCC}
-C {8T_sram_cell_c.sym} 2260 -2060 0 1 {name=x7}
-C {lab_pin.sym} 2400 -2020 0 0 {name=p111 sig_type=std_logic lab=RWL}
-C {lab_pin.sym} 2400 -2040 0 0 {name=p112 sig_type=std_logic lab=RBL7}
 C {iopin.sym} 110 -2010 0 0 {name=p17 lab=BL[0..7]}
 C {lab_pin.sym} 110 -2010 0 0 {name=p26 sig_type=std_logic lab=BL[0..7]}
 C {iopin.sym} 110 -1990 0 0 {name=p59 lab=BLB[0..7]}
@@ -382,14 +334,6 @@ C {bus_tap.sym} 860 -2250 1 0 {name=l6 lab=2}
 C {bus_tap.sym} 880 -2200 1 0 {name=l7 lab=2}
 C {bus_tap.sym} 1150 -2250 1 0 {name=l8 lab=3}
 C {bus_tap.sym} 1170 -2200 1 0 {name=l9 lab=3}
-C {bus_tap.sym} 1730 -2250 1 0 {name=l11 lab=5}
-C {bus_tap.sym} 1750 -2200 1 0 {name=l12 lab=5}
-C {bus_tap.sym} 2020 -2250 1 0 {name=l13 lab=6}
-C {bus_tap.sym} 2040 -2200 1 0 {name=l14 lab=6}
-C {bus_tap.sym} 2310 -2250 1 0 {name=l15 lab=7}
-C {bus_tap.sym} 2330 -2200 1 0 {name=l16 lab=7}
-C {bus_tap.sym} 1440 -2250 1 0 {name=l17 lab=4}
-C {bus_tap.sym} 1460 -2200 1 0 {name=l18 lab=4}
 C {code_shown.sym} -1440 -1590 0 1 {name=s4 only_toplevel=false spice_ignore=true value=
 "
 .param dly=0ns t_dly=1ns rise=10ps fall=10ps BL_period=20ns prds=10 pre_time=6ns read_time=2ns write_delay=10ns 
@@ -472,7 +416,7 @@ C {iopin.sym} 110 -2080 0 0 {name=p133 lab=CLK_bar}
 C {lab_pin.sym} 110 -2080 0 0 {name=p134 sig_type=std_logic lab=CLK_bar}
 C {iopin.sym} 110 -2130 0 0 {name=p135 lab=EN_bar}
 C {lab_pin.sym} 110 -2130 0 0 {name=p136 lab=EN_bar}
-C {code_shown.sym} -2520 -1560 0 1 {name=s1 only_toplevel=false spice_ignore=false value=
+C {code_shown.sym} -2520 -1560 0 1 {name=s1 only_toplevel=false spice_ignore=true value=
 "
 .param dly=0ns t_dly=1ns rise=10ps fall=10ps BL_period=20ns prds=10 pre_time=6ns read_time=0.5ns write_delay=10ns 
 
@@ -531,7 +475,14 @@ plot EN
 plot I0 I1+2 I2+4
 .endc
 "}
-C {code_shown.sym} -1140 -1640 0 0 {name=s5 only_toplevel=false spice_ignore=false value=
+C {code_shown.sym} -1140 -1660 0 0 {name=s5 only_toplevel=false spice_ignore=false value=
 "
-.include "/home/user/pyvenvs/sky130venv/initial_sram_voltages.spice"
+.include "/home/user/pyvenvs/sky130venv/spice_files/initial_sram_voltages.spice"
+
+.param dly=0ns t_dly=1ns rise=10ps fall=10ps BL_period=20ns prds=10 pre_time=6ns rwl_time=0.5ns write_delay=10ns 
+.include "/home/user/pyvenvs/sky130venv/spice_files/bit4mac.spice"
 "}
+C {launcher.sym} -980 -2480 0 0 {name=h1
+descr="load waves" 
+tclcommand="xschem raw_read $netlist_dir/write_test_row1_small.raw tran"
+}

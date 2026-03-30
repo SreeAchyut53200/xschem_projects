@@ -5,16 +5,16 @@ V {}
 S {}
 F {}
 E {}
-B 2 -650 -850 150 -450 {flags=graph
+B 2 -650 -2110 150 -1710 {flags=graph
 y1=0.059
 y2=1.8
-ypos1=0.16402513
-ypos2=0.58171651
+ypos1=0.12979221
+ypos2=0.525607
 divy=5
 subdivy=1
 unity=1
-x1=-2.4e-08
-x2=4.56e-07
+x1=3.7486547e-07
+x2=3.7728333e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -30,15 +30,15 @@ node="q
 clk"
 digital=1}
 B 2 -650 -1280 150 -880 {flags=graph
-y1=1.5014
-y2=3.4944
+y1=-0.33
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-2.4e-08
-x2=4.56e-07
+x1=3.7486547e-07
+x2=3.7728333e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -52,15 +52,15 @@ color="4 5"
 node="x1.out-
 x1.out+"}
 B 2 -650 -1700 150 -1300 {flags=graph
-y1=0.0070910693
-y2=1.1372681
+y1=1.8065878
+y2=1.8160876
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-2.4e-08
-x2=4.56e-07
+x1=3.7486547e-07
+x2=3.7728333e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -74,9 +74,9 @@ logx=0
 logy=0
 rawfile=$netlist_dir/comp_1bit_test.raw
 hilight_wave=1}
-C {code_shown.sym} -1000 -340 0 0 {name=bro only_toplevel=false spice_ignore=true value=
+C {code_shown.sym} -1000 -340 0 0 {name=bro only_toplevel=false spice_ignore=false value=
 "
-.param VSS=0 VCC=1.8 Vcm=0.39 Vdif=0.093 time_period=30ns prds=16 rise=10ps fall=10ps
+.param VSS=0 VCC=1.8 Vcm=1.808 Vdif=1.815 time_period=50ns prds=16 rise=10ps fall=10ps
 
 VCC VCC 0 DC 1.8
 VSS VSS 0 DC 0
@@ -96,12 +96,6 @@ V_EN_bar EN_bar 0 PULSE(\{VSS\} \{VCC\} 0ns \{rise\} \{fall\} \{time_period*prds
 .control
 run
 plot v(IN1) v(IN2) v(x1.OUT+)+2.2 v(x1.OUT-)+2.2 Q-2.2 Q_bar-2.2 CLK+4.2 en+6.2
-  foreach vdif 0.093 0.092 0.089 0.087 0.086 0.085 0.083 0.081
-    alterparam Vdif = $vdif
-    reset
-    run
-    plot v(IN1) v(IN2) v(x1.OUT+)+2.2 v(x1.OUT-)+2.2 Q-2.2 Q_bar-2.2 CLK+4.2 en+6.2
-  end
 .endc
 "}
 C {code.sym} -1270 -1040 0 0 {
@@ -234,7 +228,7 @@ plot v(IN1) v(IN2) v(x1.OUT+)+2.2 v(x1.OUT-)+2.2 Q-2.2 Q_bar-2.2 CLK+4.2 en+6.2
   end
 .endc
 "}
-C {code.sym} -1300 -710 0 0 {name=all threshold test1 only_toplevel=false spice_ignore=false value=
+C {code.sym} -1300 -710 0 0 {name="all threshold test1" only_toplevel=false spice_ignore=true value=
 "
 .param VSS=0 VCC=1.8 Vcm=1.45 Vdif=0.3 time_period=30ns prds=130 rise=100ps fall=100ps
 

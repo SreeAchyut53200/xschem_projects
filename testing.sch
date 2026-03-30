@@ -5,6 +5,7 @@ V {}
 S {}
 F {}
 E {}
+B 4 -210 50 3100 1260 {fill=false}
 P 4 5 -350 -600 930 -600 930 -380 -350 -380 -350 -600 {}
 T {To call Python instead of ngspice:
 Simulation -> Configure simulators and tools
@@ -16,6 +17,8 @@ N 140 -140 150 -140 {lab=VSS}
 N 140 -140 270 -140 {lab=VSS}
 N 140 -200 270 -200 {lab=OUT}
 N 250 -170 250 -140 {lab=VSS}
+N 520 340 2640 340 {lab=ABC[0..7]_bar
+bus=true}
 C {code_shown.sym} -490 -240 0 0 {name=s1 only_toplevel=false value="
 
 .param VDD=1.8 VSS=0
@@ -93,3 +96,28 @@ plot v(IN+) v(IN-) v(OUT+)+2.2 v(OUT-)+2.2
 .tran 0.01ns \{time_period*prds\}
 .save all
 "}
+C {lab_pin.sym} 500 560 0 1 {name=p138 lab=MAC_EN}
+C {lab_pin.sym} 790 560 0 1 {name=p149 lab=MAC_EN}
+C {lab_pin.sym} 1080 560 0 1 {name=p158 lab=MAC_EN}
+C {lab_pin.sym} 1370 560 0 1 {name=p167 lab=MAC_EN}
+C {lab_pin.sym} 1660 560 0 1 {name=p176 lab=MAC_EN}
+C {lab_pin.sym} 1950 560 0 1 {name=p185 lab=MAC_EN}
+C {lab_pin.sym} 2240 560 0 1 {name=p194 lab=MAC_EN}
+C {lab_pin.sym} 2530 560 0 1 {name=p203 lab=MAC_EN}
+C {lab_pin.sym} 2590 300 0 0 {name=p267 sig_type=std_logic lab=MAC1C0}
+C {lab_pin.sym} 2300 300 0 0 {name=p268 sig_type=std_logic lab=MAC1C0}
+C {lab_pin.sym} 2010 300 0 0 {name=p269 sig_type=std_logic lab=MAC1C0}
+C {lab_pin.sym} 1720 300 0 0 {name=p270 sig_type=std_logic lab=MAC1C0}
+C {lab_pin.sym} 1430 300 0 0 {name=p271 sig_type=std_logic lab=MAC1C0}
+C {lab_pin.sym} 1140 300 0 0 {name=p272 sig_type=std_logic lab=MAC1C0}
+C {lab_pin.sym} 850 300 0 0 {name=p273 sig_type=std_logic lab=MAC1C1}
+C {lab_pin.sym} 560 300 0 0 {name=p274 sig_type=std_logic lab=MAC1C0}
+C {bus_tap.sym} 560 340 1 0 {name=l43 lab=0}
+C {bus_tap.sym} 850 340 1 0 {name=l44 lab=0}
+C {bus_tap.sym} 1140 340 1 0 {name=l45 lab=0}
+C {bus_tap.sym} 1430 340 1 0 {name=l46 lab=0}
+C {bus_tap.sym} 1720 340 1 0 {name=l47 lab=0}
+C {bus_tap.sym} 2010 340 1 0 {name=l48 lab=0}
+C {bus_tap.sym} 2300 340 1 0 {name=l49 lab=0}
+C {bus_tap.sym} 2590 340 1 0 {name=l50 lab=0}
+C {lab_pin.sym} 520 340 0 0 {name=p275 sig_type=std_logic lab=ABC[0..7]_bar}

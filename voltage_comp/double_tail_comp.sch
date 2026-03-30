@@ -5,39 +5,38 @@ V {}
 S {}
 F {}
 E {}
-N 490 -490 490 -450 {lab=OUT-}
-N 450 -520 450 -420 {lab=OUT+}
-N 320 -490 320 -450 {lab=OUT+}
-N 360 -520 360 -420 {lab=OUT-}
+N 490 -460 490 -450 {lab=OUT-}
+N 450 -480 450 -420 {lab=OUT+}
+N 320 -480 320 -450 {lab=OUT+}
+N 360 -460 360 -420 {lab=OUT-}
 N 320 -480 450 -480 {lab=OUT+}
 N 360 -460 490 -460 {lab=OUT-}
-N 310 -30 490 -30 {lab=#net1}
-N 310 -130 310 -90 {lab=Di-}
-N 490 -130 490 -90 {lab=Di+}
+N 480 -30 490 -30 {lab=#net1}
+N 310 -110 310 -90 {lab=Di-}
+N 490 -110 490 -90 {lab=Di+}
 N 230 -420 230 -110 {lab=Di-}
 N 230 -110 310 -110 {lab=Di-}
 N 580 -420 580 -110 {lab=Di+}
 N 490 -110 580 -110 {lab=Di+}
 N 400 -360 400 -340 {lab=VSS}
-N 270 -390 320 -390 {lab=VSS}
-N 490 -390 540 -390 {lab=VSS}
+N 310 -390 320 -390 {lab=VSS}
+N 530 -390 540 -390 {lab=VSS}
 N 510 -390 510 -360 {lab=VSS}
-N 300 -360 510 -360 {lab=VSS}
+N 400 -360 510 -360 {lab=VSS}
 N 300 -390 300 -360 {lab=VSS}
 N 400 -630 400 -610 {lab=VCC}
 N 410 -240 410 -220 {lab=VCC}
 N 310 -220 310 -190 {lab=VCC}
-N 310 -220 490 -220 {lab=VCC}
+N 410 -220 490 -220 {lab=VCC}
 N 490 -220 490 -190 {lab=VCC}
 N 400 -580 410 -580 {lab=VCC}
 N 410 -610 410 -580 {lab=VCC}
 N 400 -610 410 -610 {lab=VCC}
 N 310 -520 320 -520 {lab=#net2}
 N 310 -550 310 -520 {lab=#net2}
-N 310 -550 320 -550 {lab=#net2}
+N 310 -550 500 -550 {lab=#net2}
 N 490 -520 500 -520 {lab=#net2}
 N 500 -550 500 -520 {lab=#net2}
-N 490 -550 500 -550 {lab=#net2}
 N 300 -160 310 -160 {lab=VCC}
 N 300 -190 300 -160 {lab=VCC}
 N 300 -190 310 -190 {lab=VCC}
@@ -61,15 +60,31 @@ N 280 -420 280 -390 {lab=VSS}
 N 270 -420 280 -420 {lab=VSS}
 N 180 -480 320 -480 {lab=OUT+}
 N 490 -480 630 -480 {lab=OUT-}
-N 180 -60 270 -60 {lab=IN+}
-N 530 -60 630 -60 {lab=IN-}
 N 400 30 400 50 {lab=VSS}
-N 350 -160 450 -160 {lab=CLK}
+N 400 -160 450 -160 {lab=CLK}
 N 400 -180 400 -160 {lab=CLK}
 N 490 -450 540 -450 {lab=OUT-}
 N 270 -450 320 -450 {lab=OUT+}
-N 320 -550 400 -550 {lab=#net2}
-N 400 -550 490 -550 {lab=#net2}
+N 320 -490 320 -480 {lab=OUT+}
+N 450 -520 450 -480 {lab=OUT+}
+N 360 -520 360 -460 {lab=OUT-}
+N 490 -480 490 -460 {lab=OUT-}
+N 310 -130 310 -110 {lab=Di-}
+N 490 -130 490 -110 {lab=Di+}
+N 300 -360 400 -360 {lab=VSS}
+N 500 -390 510 -390 {lab=VSS}
+N 280 -390 300 -390 {lab=VSS}
+N 310 -220 410 -220 {lab=VCC}
+N 320 -30 480 -30 {lab=#net1}
+N 310 -30 320 -30 {lab=#net1}
+N 510 -390 530 -390 {lab=VSS}
+N 490 -390 500 -390 {lab=VSS}
+N 300 -390 310 -390 {lab=VSS}
+N 270 -390 280 -390 {lab=VSS}
+N 490 -490 490 -480 {lab=OUT-}
+N 350 -160 400 -160 {lab=CLK}
+N 180 -60 270 -60 {lab=IN+}
+N 530 -60 620 -60 {lab=IN-}
 C {sky130_fd_pr/nfet_01v8.sym} 470 -420 0 0 {name=M2
 L=0.15
 W=0.5  
@@ -128,7 +143,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 290 -60 0 0 {name=M9
 L=0.15
-W=1  
+W=0.5  
 nf=1 mult=1
 model=nfet_01v8
 spiceprefix=X
@@ -142,7 +157,7 @@ spiceprefix=X
 }
 C {sky130_fd_pr/nfet_01v8.sym} 510 -60 0 1 {name=M10
 L=0.15
-W=1  
+W=0.5  
 nf=1 mult=1
 model=nfet_01v8
 spiceprefix=X
@@ -180,7 +195,7 @@ C {lab_pin.sym} 400 -180 0 1 {name=p23 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} -370 -440 0 1 {name=p25 sig_type=std_logic lab=IN+}
 C {lab_pin.sym} -370 -400 0 1 {name=p26 sig_type=std_logic lab=IN-}
 C {lab_pin.sym} 180 -60 0 0 {name=p27 sig_type=std_logic lab=IN+}
-C {lab_pin.sym} 630 -60 0 1 {name=p28 sig_type=std_logic lab=IN-}
+C {lab_pin.sym} 620 -60 0 1 {name=p28 sig_type=std_logic lab=IN-}
 C {lab_pin.sym} 400 -340 0 1 {name=p29 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} 360 0 0 0 {name=p7 sig_type=std_logic lab=CLK}
 C {lab_pin.sym} 360 -580 0 0 {name=p24 sig_type=std_logic lab=CLK_bar

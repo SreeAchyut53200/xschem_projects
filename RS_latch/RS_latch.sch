@@ -34,12 +34,8 @@ N -90 -30 -30 -30 {lab=Q}
 N -30 -30 -30 50 {lab=Q}
 N -30 50 50 80 {lab=Q}
 N 50 80 50 110 {lab=Q}
-N -90 -0 -80 -0 {lab=D}
-N -80 0 -80 30 {lab=D}
-N -90 30 -80 30 {lab=D}
-N 100 0 110 0 {lab=D_bar}
-N 100 0 100 30 {lab=D_bar}
-N 100 30 110 30 {lab=D_bar}
+N -90 -0 -80 -0 {lab=VSS}
+N 100 0 110 0 {lab=VSS}
 N 110 110 120 110 {lab=VSS}
 N 120 110 120 140 {lab=VSS}
 N 110 140 120 140 {lab=VSS}
@@ -182,3 +178,14 @@ C {lab_pin.sym} 330 -130 0 1 {name=p20 sig_type=std_logic lab=R}
 C {lab_pin.sym} 240 -110 0 0 {name=p21 sig_type=std_logic lab=VSS}
 C {lab_pin.sym} -90 50 0 0 {name=p13 sig_type=std_logic lab=D}
 C {lab_pin.sym} 110 50 0 1 {name=p22 sig_type=std_logic lab=D_bar}
+C {lab_pin.sym} 100 0 0 0 {name=p23 sig_type=std_logic lab=VSS}
+C {lab_pin.sym} -80 0 0 1 {name=p24 sig_type=std_logic lab=VSS}
+C {code_shown.sym} -740 80 0 0 {name=s1 only_toplevel=false spice_ignore=true value=
+"
+.nodeset v(Q)=0 v(Q_bar)=1
+"}
+C {code_shown.sym} -740 160 0 0 {name=s2 only_toplevel=false spice_ignore=true value=
+"
+Rinit_Q Q VSS 100Meg
+Rinit_Qb Q_bar VCC 100Meg
+"}
