@@ -13,8 +13,8 @@ ypos2=2.1137916
 divy=5
 subdivy=1
 unity=1
-x1=-1.905e-08
-x2=1.0795e-07
+x1=5.5064878e-08
+x2=1.6711725e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -90,8 +90,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1.46259e-09
-x2=5.418389e-08
+x1=-6.5639214e-09
+x2=1.0548843e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -113,13 +113,13 @@ digital=1}
 B 2 -1760 -3380 -960 -2980 {flags=graph
 y1=-0.059
 y2=1.9
-ypos1=0.06935
-ypos2=1.99635
+ypos1=-0.027
+ypos2=1.9
 divy=5
 subdivy=1
 unity=1
-x1=-1.905e-08
-x2=1.0795e-07
+x1=5.5064878e-08
+x2=1.6711725e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -159,8 +159,8 @@ ypos2=1.9
 divy=5
 subdivy=1
 unity=1
-x1=-1.905e-08
-x2=1.0795e-07
+x1=5.5064878e-08
+x2=1.6711725e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -183,15 +183,15 @@ macrwl"
 sim_type=tran
 color="4 5 6 7 8 9 10"}
 B 2 -30 -3170 770 -2770 {flags=graph
-y1=-0.79352553
-y2=2.2931948
+y1=-0.17618
+y2=2.91054
 ypos1=-0.027
 ypos2=1.9
 divy=5
 subdivy=1
 unity=1
-x1=-1.905e-08
-x2=1.0795e-07
+x1=5.5064878e-08
+x2=1.6711725e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -206,18 +206,18 @@ digital=0
 hilight_wave=0
 sim_type=tran
 color="4 5"
-node="x80.x1.x1.out+
-x80.x1.x1.out-"}
+node="x81.x1.x1.out+
+x81.x1.x1.out-"}
 B 2 -940 -2910 -140 -2510 {flags=graph
-y1=-0.055
-y2=1.9
+y1=1.719514
+y2=1.8721642
 ypos1=-0.027
 ypos2=1.9
 divy=5
 subdivy=1
 unity=1
-x1=-1.905e-08
-x2=1.0795e-07
+x1=5.5064878e-08
+x2=1.6711725e-07
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -229,13 +229,10 @@ logy=0
 rawfile=$netlist_dir/ham_real_full.raw
 autoload=0
 digital=0
-hilight_wave=10
+hilight_wave=3
 sim_type=tran
-color="4 5 6 7 8 9 10 11 12 13 14 15 8 4 4 4"
-node="pre
-rwl
-macrwl
-rbl7
+color="4 5 6 7 8 9 10 11 12 13 13 13 13 13 13 13 13 13"
+node="rbl7
 rbl6
 rbl5
 rbl4
@@ -248,7 +245,12 @@ clk
 
 tr7
 tr6
-tr5"}
+tr5
+tr4
+tr3
+tr2
+tr1
+tr0"}
 N 940 -3210 940 -3120 {lab=RBL0}
 N 940 -3150 990 -3150 {lab=RBL0}
 N 940 -3290 940 -3270 {lab=GND}
@@ -738,7 +740,7 @@ C {iopin.sym} 110 -1880 0 0 {name=p89 lab=RBL[0..7]}
 C {iopin.sym} 110 -1860 0 0 {name=p90 lab=RWL}
 C {lab_pin.sym} 110 -1880 0 0 {name=p91 sig_type=std_logic lab=RBL[0..7]}
 C {lab_pin.sym} 110 -1860 0 0 {name=p92 sig_type=std_logic lab=RWL}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 940 -3090 0 0 {name=C2 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 940 -3090 0 0 {name=C2 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 940 -3290 2 0 {name=l1 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 920 -3240 2 1 {name=M2
 W=1
@@ -894,7 +896,7 @@ C {lab_pin.sym} 940 -1850 0 0 {name=p107 sig_type=std_logic lab=WL1}
 C {lab_pin.sym} 1230 -1850 0 0 {name=p108 sig_type=std_logic lab=WL1}
 C {lab_pin.sym} 1520 -1850 0 0 {name=p113 sig_type=std_logic lab=WL1}
 C {lab_pin.sym} 1810 -1850 0 0 {name=p114 sig_type=std_logic lab=WL1}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1230 -3090 0 0 {name=C1 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1230 -3090 0 0 {name=C1 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 1230 -3290 2 0 {name=l27 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 1210 -3240 2 1 {name=M1
 W=1
@@ -912,7 +914,7 @@ spiceprefix=X
 }
 C {gnd.sym} 1230 -3060 0 1 {name=l28 lab=GND}
 C {lab_pin.sym} 1170 -3240 0 0 {name=p99 sig_type=std_logic lab=PRE}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1520 -3090 0 0 {name=C3 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1520 -3090 0 0 {name=C3 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 1520 -3290 2 0 {name=l29 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 1500 -3240 2 1 {name=M3
 W=1
@@ -930,7 +932,7 @@ spiceprefix=X
 }
 C {gnd.sym} 1520 -3060 0 1 {name=l30 lab=GND}
 C {lab_pin.sym} 1460 -3240 0 0 {name=p119 sig_type=std_logic lab=PRE}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 1810 -3090 0 0 {name=C4 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 1810 -3090 0 0 {name=C4 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 1810 -3290 2 0 {name=l31 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 1790 -3240 2 1 {name=M4
 W=1
@@ -1026,7 +1028,7 @@ C {lab_pin.sym} 1190 340 0 0 {name=p252 sig_type=std_logic lab=MACRBL}
 C {lab_pin.sym} 900 340 0 0 {name=p253 sig_type=std_logic lab=MACRBL}
 C {iopin.sym} 110 -1750 0 0 {name=p254 lab=MACRWL}
 C {lab_pin.sym} 110 -1750 0 0 {name=p255 sig_type=std_logic lab=MACRWL}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 3530 -1390 0 0 {name=C9 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 3530 -1390 0 0 {name=C9 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 3530 -1590 2 0 {name=l41 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 3510 -1540 2 1 {name=M9
 W=1
@@ -1529,7 +1531,7 @@ C {bus_tap.sym} 1970 200 1 0 {name=l38 lab=4}
 C {bus_tap.sym} 2260 200 1 0 {name=l39 lab=5}
 C {bus_tap.sym} 2550 200 1 0 {name=l40 lab=6}
 C {bus_tap.sym} 2840 200 1 0 {name=l43 lab=7}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 2100 -3090 0 0 {name=C5 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 2100 -3090 0 0 {name=C5 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 2100 -3290 2 0 {name=l44 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 2080 -3240 2 1 {name=M5
 W=1
@@ -1547,7 +1549,7 @@ spiceprefix=X
 }
 C {gnd.sym} 2100 -3060 0 1 {name=l45 lab=GND}
 C {lab_pin.sym} 2040 -3240 0 0 {name=p464 sig_type=std_logic lab=PRE}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 2390 -3090 0 0 {name=C6 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 2390 -3090 0 0 {name=C6 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 2390 -3290 2 0 {name=l46 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 2370 -3240 2 1 {name=M6
 W=1
@@ -1565,7 +1567,7 @@ spiceprefix=X
 }
 C {gnd.sym} 2390 -3060 0 1 {name=l47 lab=GND}
 C {lab_pin.sym} 2330 -3240 0 0 {name=p465 sig_type=std_logic lab=PRE}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 2680 -3090 0 0 {name=C7 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 2680 -3090 0 0 {name=C7 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 2680 -3290 2 0 {name=l48 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 2660 -3240 2 1 {name=M7
 W=1
@@ -1583,7 +1585,7 @@ spiceprefix=X
 }
 C {gnd.sym} 2680 -3060 0 1 {name=l49 lab=GND}
 C {lab_pin.sym} 2620 -3240 0 0 {name=p466 sig_type=std_logic lab=PRE}
-C {sky130_fd_pr/cap_mim_m3_1.sym} 2970 -3090 0 0 {name=C8 model=cap_mim_m3_1 W=27 L=1 MF=1 spiceprefix=X}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 2970 -3090 0 0 {name=C8 model=cap_mim_m3_1 W=30 L=1 MF=1 spiceprefix=X}
 C {gnd.sym} 2970 -3290 2 0 {name=l50 lab=GND}
 C {sky130_fd_pr/nfet_01v8.sym} 2950 -3240 2 1 {name=M8
 W=1
